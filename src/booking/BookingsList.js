@@ -8,14 +8,14 @@ export class BookingsList extends Component {
 
         return (
             <Fragment>
-                <Header as="h1">All bookings</Header>
+                <Header as="h1">Todas las reservas</Header>
 
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHeaderCell>Booking Id</TableHeaderCell>
-                            <TableHeaderCell>Customer</TableHeaderCell>
-                            <TableHeaderCell>Status</TableHeaderCell>
+                            <TableHeaderCell>Reserva</TableHeaderCell>
+                            <TableHeaderCell>Cliente</TableHeaderCell>
+                            <TableHeaderCell>Estado</TableHeaderCell>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -27,7 +27,7 @@ export class BookingsList extends Component {
                                         {`${booking.firstname} ${booking.lastname}`}
                                     </Link>
                                 </TableCell>
-                                <TableCell>{booking.isopen ? "Open" : "Closed"}</TableCell>
+                                <TableCell>{booking.isopen == '0' && "Abierta"}{booking.isopen == '1' && "Cerrada"}</TableCell>
                             </TableRow>
                         )}
                     </TableBody>

@@ -17,7 +17,7 @@ export class CustomerDetails extends Component {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHeaderCell>Booking Id</TableHeaderCell>
+                            <TableHeaderCell>Codigo de reserva</TableHeaderCell>
                         </TableRow>
                     </TableHeader>
                     <TableBody>

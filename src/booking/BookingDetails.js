@@ -25,46 +25,46 @@ export class BookingDetails extends Component {
                 <Table striped>
                     <Table.Body>
                         <Table.Row>
-                            <Table.Cell><strong>Customer</strong></Table.Cell>
+                            <Table.Cell><strong>Cliente</strong></Table.Cell>
                             <Table.Cell><Link to={"/customer/" + customerid}>{`${firstname} ${lastname}`}</Link></Table.Cell>
                         </Table.Row>
 
-                        {!isopen &&
+                        {isopen === '1' &&
                             <Table.Row>
-                                <Table.Cell><strong>Invoice</strong></Table.Cell>
-                            <Table.Cell><Link to={"/invoice/" + bookingid}>Click here</Link></Table.Cell>
+                            <Table.Cell><strong>Factura</strong></Table.Cell>
+                            <Table.Cell><Link to={"/invoice/" + bookingid}>Click aqui</Link></Table.Cell>
                             </Table.Row>
                         }
 
-                        {isopen &&
+                        {isopen === '0' &&
                             <Table.Row>
-                                <Table.Cell><strong>End booking</strong></Table.Cell>
-                            <Table.Cell><Link to={"/end/" + bookingid}>Click here</Link></Table.Cell>
+                            <Table.Cell><strong>Finalizar reserva</strong></Table.Cell>
+                            <Table.Cell><Link to={"/end/" + bookingid}>Click aqui</Link></Table.Cell>
                             </Table.Row>
                         }
 
                         <Table.Row>
-                            <Table.Cell><strong>Start</strong></Table.Cell>
+                            <Table.Cell><strong>Inicio</strong></Table.Cell>
                             <Table.Cell>{new Date(startdate).toLocaleString("es-AR")}</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><strong>End</strong></Table.Cell>
+                            <Table.Cell><strong>Final</strong></Table.Cell>
                             <Table.Cell>{enddate !== null ? new Date(enddate).toLocaleString("es-AR") : "-"}</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><strong>Car</strong></Table.Cell>
+                            <Table.Cell><strong>Auto</strong></Table.Cell>
                             <Table.Cell>{car}</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><strong>License</strong></Table.Cell>
+                            <Table.Cell><strong>Licencia</strong></Table.Cell>
                             <Table.Cell>{license}</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><strong>Start mileage</strong></Table.Cell>
+                            <Table.Cell><strong>Kilometraje inicial</strong></Table.Cell>
                             <Table.Cell>{startkm} km</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><strong>End mileage</strong></Table.Cell>
+                            <Table.Cell><strong>Kilometraje final</strong></Table.Cell>
                             <Table.Cell>{endkm !== null ? endkm + " km" : "-"}</Table.Cell>
                         </Table.Row>
                     </Table.Body>

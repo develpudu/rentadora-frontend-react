@@ -125,30 +125,29 @@ export class Create extends Component {
         return (
 
             <Grid.Column width={10}>
-                <Header as="h1" textAlign="center">Create new booking</Header>
+                <Header as="h1" textAlign="center">Crear nueva reserva</Header>
 
                 {error && <Message danger content={errorMessage} />}
 
                 <Form autoComplete="off" onSubmit={this.handleSubmit}>
-                    <Form.Input placeholder="John" required name="firstname" label="First name" type="text" onChange={this.handleChange} />
-                    <Form.Input placeholder="Doe" required name="lastname" label="Last name" type="text" onChange={this.handleChange} />
-                    <Form.Input placeholder="YYMMDD-XXXX" required name="ssn" label="SSN" type="text" onChange={this.handleChange} />
+                    <Form.Input placeholder="John" required name="firstname" label="Nombre" type="text" onChange={this.handleChange} />
+                    <Form.Input placeholder="Doe" required name="lastname" label="Apellido" type="text" onChange={this.handleChange} />
+                    <Form.Input placeholder="00000000" required name="license" label="Nro de licencia" type="text" onChange={this.handleChange} />
 
                     <Divider />
 
-                    <Form.Select required name="car" label="Model" options={cars} placeholder="Select..." onChange={this.handleChange} />
-                    <Form.Input placeholder="ABC123" required name="license" label="License number" type="text" onChange={this.handleChange} />
-                    <Form.Input placeholder="9999" required name="startmileage" label="Current mileage (km)" type="text" onChange={this.handleChange} />
+                    <Form.Select required name="car" label="Model" options={cars} placeholder="Seleccionar..." onChange={this.handleChange} />
+                    <Form.Input placeholder="9999" required name="startmileage" label="Kilomentraje actual (km)" type="text" onChange={this.handleChange} />
 
                     <Divider />
 
                     <Form.Input required name="date" type="date" label="Date" onChange={this.handleChange} />
                     <Form.Group widths="equal">
-                        <Form.Select label="Hour" required name="hour" options={hours} onChange={this.handleChange} />
-                        <Form.Select label="Minute" required name="minute" options={minutes} onChange={this.handleChange} />
+                        <Form.Select label="Horas" required name="hour" options={hours} onChange={this.handleChange} />
+                        <Form.Select label="Minutos" required name="minute" options={minutes} onChange={this.handleChange} />
                     </Form.Group>
 
-                    <Button fluid primary type="submit">Create</Button>
+                    <Button fluid primary type="submit">Crear</Button>
                 </Form>
             </Grid.Column>
         );

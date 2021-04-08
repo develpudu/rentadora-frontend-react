@@ -81,23 +81,23 @@ export class End extends Component {
 
         return (
             <Grid.Column width={10}>
-                <Header as="h1" textAlign="center">End booking</Header>
+                <Header as="h1" textAlign="center">Finalizar reserva</Header>
 
                 {error && <Message warning content={errorMessage} />}
 
                 <Form onSubmit={this.handleSubmit}>
-                    <Form.Input required name="bookingid" value={bookingid} type="text" label="Booking Id" onChange={this.handleChange} />
+                    <Form.Input required name="bookingid" value={bookingid} type="text" label="Codigo de reserva" onChange={this.handleChange} />
 
-                    <Form.Input required name="endmileage" type="text" label="Final mileage (km)" onChange={this.handleChange} />
+                    <Form.Input required name="endmileage" type="text" label="Kilomentraje final (km)" onChange={this.handleChange} />
 
-                    <Form.Input required name="date" type="date" label="Date" onChange={this.handleChange} />
+                    <Form.Input required name="date" type="date" label="Fecha" onChange={this.handleChange} />
 
                     <Form.Group widths="equal">
-                        <Form.Select label="Hour" required name="hour" options={hours} onChange={this.handleChange} />
-                        <Form.Select label="Minute" required name="minute" options={minutes} onChange={this.handleChange} />
+                        <Form.Select label="Hora" required name="hour" options={hours} onChange={this.handleChange} />
+                        <Form.Select label="Minutos" required name="minute" options={minutes} onChange={this.handleChange} />
                     </Form.Group>
 
-                    <Button fluid primary type="submit">Submit</Button>
+                    <Button fluid primary type="submit">Guardar</Button>
                 </Form>
             </Grid.Column>
         );
