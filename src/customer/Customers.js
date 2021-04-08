@@ -17,7 +17,7 @@ export class Customers extends Component {
     }
 
     componentDidMount = () => {
-        API.get("/api/customers")
+        API.get("/customers")
             .then(response => {
                 this.setState({
                     loaded: true,

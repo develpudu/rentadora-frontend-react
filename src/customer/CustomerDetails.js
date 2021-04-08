@@ -12,7 +12,7 @@ export class CustomerDetails extends Component {
 
         return (
             <Fragment>
-                <Header as="h1">Bookings for {`${firstName} ${lastName}`}</Header>
+                <Header as="h1">Reservas para {`${firstName} ${lastName}`}</Header>
                 
                 <List>
                     {bookings.map(item =>

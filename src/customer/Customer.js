@@ -19,7 +19,7 @@ export class Customer extends Component {
     componentDidMount = () => {
         const { id } = this.props.match.params;
 
-        API.get("/api/customers/" + id)
+        API.get("/customers/" + id)
             .then(response => {
                 this.setState({
                     loaded: true,

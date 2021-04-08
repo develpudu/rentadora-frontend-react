@@ -8,13 +8,13 @@ export class CustomersList extends Component {
 
         return (
             <Fragment>
-                <Header as="h1">All customers</Header>
+                <Header as="h1">Todos los clientes</Header>
 
                 <List>
                     {customers.map(customer =>
                         <List.Item>
                             <Link to={"/customer/" + customer.id}>
-                                {`${customer.firstName} ${customer.lastName}`}
+                                {`${customer.firstname} ${customer.lastname}`}
                             </Link>
                         </List.Item>
                     )}
