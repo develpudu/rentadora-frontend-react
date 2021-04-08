@@ -1,23 +1,37 @@
 import React, { Fragment, Component } from 'react';
-import { Header, List } from 'semantic-ui-react';
+import { Table, TableHeader, TableHeaderCell, TableRow, TableBody, TableCell, Header, List } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 export class CustomerDetails extends Component {
     render() {
         const {
-            firstName,
-            lastName,
+            firstname,
+            lastname,
             bookings,
         } = this.props.customer;
 
         return (
             <Fragment>
-                <Header as="h1">Reservas para {`${firstName} ${lastName}`}</Header>
-                
+                <Header as="h1">Reservas para {`${firstname} ${lastname}`}</Header>
+
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHeaderCell>Booking Id</TableHeaderCell>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {bookings.map(booking =>
+                            <TableRow>
+                                <TableCell><Link to={"/booking/" + booking.bookingid}>{booking.bookingid}</Link></TableCell>
+                            </TableRow>
+                        )}
+                    </TableBody>
+                </Table>
                 <List>
-                    {bookings.map(item =>
+                    {bookings.map(booking =>
                         <List.Item>
-                            <Link to={"/booking/" + item.bookingId}>{item.bookingId}</Link>
+
                         </List.Item>
                     )}
                 </List>

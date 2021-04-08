@@ -19,7 +19,7 @@ export class Booking extends Component {
     componentDidMount = () => {
         const { id } = this.props.match.params;
 
-        API.get("/api/bookings/" + id)
+        API.get("/bookings/" + id)
             .then(response => {
                 this.setState({
                     loaded: true,

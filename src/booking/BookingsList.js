@@ -21,13 +21,13 @@ export class BookingsList extends Component {
                     <TableBody>
                         {bookings.map(booking =>
                             <TableRow>
-                                <TableCell><Link to={"/booking/" + booking.bookingId}>{booking.bookingId}</Link></TableCell>
+                                <TableCell><Link to={"/booking/" + booking.bookingid}>{booking.bookingid}</Link></TableCell>
                                 <TableCell>
-                                    <Link to={"/customer/" + booking.customerId}>
-                                        {`${booking.firstName} ${booking.lastName}`}
+                                    <Link to={"/customer/" + booking.customerid}>
+                                        {`${booking.firstname} ${booking.lastname}`}
                                     </Link>
                                 </TableCell>
-                                <TableCell>{booking.isOpen ? "Open" : "Closed"}</TableCell>
+                                <TableCell>{booking.isopen ? "Open" : "Closed"}</TableCell>
                             </TableRow>
                         )}
                     </TableBody>

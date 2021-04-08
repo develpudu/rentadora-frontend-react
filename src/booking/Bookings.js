@@ -17,7 +17,7 @@ export class Bookings extends Component {
     }
 
     componentDidMount = () => {
-        API.get("/api/bookings")
+        API.get("/bookings")
             .then(response => {
                 this.setState({
                     loaded: true,
