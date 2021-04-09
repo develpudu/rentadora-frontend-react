@@ -18,12 +18,14 @@ export class CustomerDetails extends Component {
                     <TableHeader>
                         <TableRow>
                             <TableHeaderCell>Codigo de reserva</TableHeaderCell>
+                            <TableHeaderCell>Estado</TableHeaderCell>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {bookings.map(booking =>
                             <TableRow>
                                 <TableCell><Link to={"/booking/" + booking.bookingid}>{booking.bookingid}</Link></TableCell>
+                                <TableCell>{booking.isopen === '0' && "Abierta"}{booking.isopen === '1' && "Cerrada"}</TableCell>
                             </TableRow>
                         )}
                     </TableBody>
