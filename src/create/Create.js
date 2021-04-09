@@ -54,7 +54,7 @@ export class Create extends Component {
             lastname: lastname,
             car: car,
             license: license,
-            startmkm: startmileage,
+            startkm: startmileage,
             startdate: composedDate
         };
 
