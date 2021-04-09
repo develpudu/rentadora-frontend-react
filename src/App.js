@@ -25,7 +25,7 @@ class App extends Component {
             <Grid.Row centered>
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
-              <ProtectedRoute path="/create" component={CreateBooking} />
+              <ProtectedRoute path="/createbooking" component={CreateBooking} />
               <ProtectedRoute path="/end/:id?" component={End} />
               <ProtectedRoute path="/booking/:id" component={Booking} />
               <ProtectedRoute path="/bookings" component={Bookings} />

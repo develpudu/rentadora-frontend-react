@@ -16,7 +16,7 @@ export class NavHeader extends Component {
                 </Menu.Item>
                 <Dropdown item text="Reservas">
                     <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to="/create">Crear nueva reserva</Dropdown.Item>
+                        <Dropdown.Item as={Link} to="/createbooking">Crear nueva reserva</Dropdown.Item>
                         <Dropdown.Item as={Link} to="/end">Finalizar reserva</Dropdown.Item>
                         <Dropdown.Item as={Link} to="/bookings">Todas las reservas</Dropdown.Item>
                     </Dropdown.Menu>
