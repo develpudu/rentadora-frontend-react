@@ -74,12 +74,12 @@ export class CreateBooking extends Component {
     }
 
     componentDidMount = () => {
-        API.get("/cars")
+        API.get("/cars/status")
             .then(response => {
                 const cars = response.data.map(item => {
                     return {
                         key: item.id,
-                        text: item.name,
+                        text: item.name + ' - ' + item.plate,
                         value: item.id
                     };
                 });
@@ -135,7 +135,7 @@ export class CreateBooking extends Component {
 
                     <Divider />
 
-                    <Form.Select required name="car" label="Model" options={cars} placeholder="Seleccionar..." onChange={this.handleChange} />
+                    <Form.Select required name="car" label="Auto" options={cars} placeholder="Seleccionar..." onChange={this.handleChange} />
                     <Form.Input placeholder="9999" required name="startmileage" label="Kilomentraje actual (km)" type="text" onChange={this.handleChange} />
 
                     <Divider />
