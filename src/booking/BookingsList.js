@@ -27,7 +27,7 @@ export class BookingsList extends Component {
                                         {`${booking.firstname} ${booking.lastname}`}
                                     </Link>
                                 </TableCell>
-                                <TableCell>{booking.isopen === '0' && "Abierta"}{booking.isopen === '1' && "Cerrada"}</TableCell>
+                                <TableCell>{booking.isopen === '1' && "Abierta"}{booking.isopen === '0' && "Cerrada"}</TableCell>
                             </TableRow>
                         )}
                     </TableBody>
