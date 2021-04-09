@@ -13,6 +13,7 @@ import { Bookings } from './booking/Bookings';
 import { Customers } from './customer/Customers';
 import Home from './home/Home';
 import { End } from './end/End';
+import { Invoices } from './invoice/Invoices';
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
               <ProtectedRoute path="/bookings" component={Bookings} />
               <ProtectedRoute path="/customer/:id" component={Customer} />
               <ProtectedRoute path="/customers" component={Customers} />
+              <ProtectedRoute path="/invoices" component={Invoices} />
               <ProtectedRoute path="/invoice/:id" component={Invoice} />
             </Grid.Row>
           </Grid>

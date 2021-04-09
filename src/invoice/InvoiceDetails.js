@@ -14,7 +14,7 @@ export class InvoiceDetails extends Component {
             license,
             firstname,
             lastname,
-            customerId,
+            customerid,
         } = this.props.invoice;
 
         return (
@@ -27,7 +27,7 @@ export class InvoiceDetails extends Component {
                     <Table.Body>
                         <Table.Row>
                             <Table.Cell><strong>Cliente</strong></Table.Cell>
-                            <Table.Cell><Link to={"/customer/" + customerId}>{`${firstname} ${lastname}`}</Link></Table.Cell>
+                            <Table.Cell><Link to={"/customer/" + customerid}>{`${firstname} ${lastname}`}</Link></Table.Cell>
                         </Table.Row>
                         <Table.Row>
                             <Table.Cell><strong>Reserva</strong></Table.Cell>
