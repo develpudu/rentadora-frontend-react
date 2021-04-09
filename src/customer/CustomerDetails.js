@@ -25,7 +25,7 @@ export class CustomerDetails extends Component {
                         {bookings.map(booking =>
                             <TableRow>
                                 <TableCell><Link to={"/booking/" + booking.bookingid}>{booking.bookingid}</Link></TableCell>
-                                <TableCell>{booking.isopen === '0' && "Abierta"}{booking.isopen === '1' && "Cerrada"}</TableCell>
+                                <TableCell>{booking.isopen === '1' && "Abierta"}{booking.isopen === '0' && "Cerrada"}</TableCell>
                             </TableRow>
                         )}
                     </TableBody>

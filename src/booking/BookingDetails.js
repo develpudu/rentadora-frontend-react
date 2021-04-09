@@ -29,14 +29,14 @@ export class BookingDetails extends Component {
                             <Table.Cell><Link to={"/customer/" + customerid}>{`${firstname} ${lastname}`}</Link></Table.Cell>
                         </Table.Row>
 
-                        {isopen === '1' &&
+                        {isopen === '0' &&
                             <Table.Row>
                             <Table.Cell><strong>Factura</strong></Table.Cell>
                             <Table.Cell><Link to={"/invoice/" + bookingid}>Click aqui</Link></Table.Cell>
                             </Table.Row>
                         }
 
-                        {isopen === '0' &&
+                        {isopen === '1' &&
                             <Table.Row>
                             <Table.Cell><strong>Finalizar reserva</strong></Table.Cell>
                             <Table.Cell><Link to={"/end/" + bookingid}>Click aqui</Link></Table.Cell>
