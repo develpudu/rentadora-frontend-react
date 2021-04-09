@@ -27,12 +27,12 @@ export class Create extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        const { firstname, lastname, ssn, car, license, startmileage, date, hour, minute } = this.state;
+        const { firstname, lastname, car, license, startmileage, date, hour, minute } = this.state;
 
         if (date === undefined) {
             this.setState({
                 error: true,
-                errorMessage: "You must pick a date.",
+                errorMessage: "Debes elegir una fecha.",
             });
 
             return;
@@ -43,7 +43,7 @@ export class Create extends Component {
         if (new Date(composedDate) < new Date()) {
             this.setState({
                 error: true,
-                errorMessage: "Date and time can't be in the past.",
+                errorMessage: "La fecha y la hora no pueden quedar en el pasado.",
             });
 
             return;
@@ -52,10 +52,9 @@ export class Create extends Component {
         const data = {
             firstname: firstname,
             lastname: lastname,
-            ssn: ssn.replace("-", ""),
             car: car,
             license: license,
-            startmileage: startmileage,
+            startmkm: startmileage,
             startdate: composedDate
         };
 
@@ -63,7 +62,7 @@ export class Create extends Component {
             .then(response => {
                 this.setState({
                     bookingComplete: true,
-                    bookingId: response.data.id,
+                    bookingid: response.data.id,
                 });
             })
             .catch(error => {
@@ -100,7 +99,7 @@ export class Create extends Component {
     };
 
     render() {
-        const { cars, error, errorMessage, bookingComplete, bookingId } = this.state;
+        const { cars, error, errorMessage, bookingComplete, bookingid } = this.state;
 
         const hours = [];
 
@@ -120,7 +119,7 @@ export class Create extends Component {
         ];
 
         if (bookingComplete)
-            return (<Redirect push to={"/booking/" + bookingId} />)
+            return (<Redirect push to={"/booking/" + bookingid} />)
 
         return (
 
