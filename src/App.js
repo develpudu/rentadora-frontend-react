@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container, Grid } from 'semantic-ui-react';
 
 import ProtectedRoute from './shared/ProtectedRoute';
-import { Create } from './create/Create';
+import { CreateBooking } from './create/CreateBooking';
 import { NavHeader } from './header/NavHeader';
 import { Booking } from './booking/Booking';
 import { Customer } from './customer/Customer';
@@ -25,7 +25,7 @@ class App extends Component {
             <Grid.Row centered>
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
-              <ProtectedRoute path="/create" component={Create} />
+              <ProtectedRoute path="/create" component={CreateBooking} />
               <ProtectedRoute path="/end/:id?" component={End} />
               <ProtectedRoute path="/booking/:id" component={Booking} />
               <ProtectedRoute path="/bookings" component={Bookings} />

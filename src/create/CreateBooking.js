@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import API, { handleError } from '../helpers/API';
 
-export class Create extends Component {
+export class CreateBooking extends Component {
     constructor(props) {
         super(props);
 
