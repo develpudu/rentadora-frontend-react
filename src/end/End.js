@@ -37,12 +37,11 @@ export class End extends Component {
         const composedDate = `${date} ${hour}:${minute}`;
 
         const data = {
-            bookingid: bookingid,
             enddate: composedDate,
-            endmileage: endmileage
+            endkm: endmileage
         };
 
-        API.put("/api/bookings", data)
+        API.put("/bookings/" + bookingid, data)
             .then(results => {
                 this.setState({
                     bookingEnded: true,

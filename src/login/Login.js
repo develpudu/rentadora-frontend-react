@@ -58,8 +58,8 @@ export class Login extends Component {
                 {error && <Message warning content={errorMessage} />}
 
                 <Form onSubmit={this.handleSubmit}>
-                    <Form.Input name="email" label="Email" type="text" onChange={this.handleChange} />
-                    <Form.Input name="password" label="Password" type="password" onChange={this.handleChange} />
+                    <Form.Input fluid icon='mail' iconPosition='left' name="email" placeholder="Email" type="text" onChange={this.handleChange} />
+                    <Form.Input fluid icon='lock' iconPosition='left' name="password" placeholder="Password" type="password" onChange={this.handleChange} />
                     <Button fluid primary type="submit">Iniciar sesión</Button>
                 </Form>
             </Grid.Column>

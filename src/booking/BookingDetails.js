@@ -20,7 +20,7 @@ export class BookingDetails extends Component {
 
         return (
             <Fragment>
-                <Header as="h1">{bookingid}</Header>
+                <Header as="h1">Reserva: {bookingid}</Header>
 
                 <Table striped>
                     <Table.Body>
