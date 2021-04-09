@@ -19,7 +19,7 @@ export class Invoice extends Component {
     componentDidMount = () => {
         const { id } = this.props.match.params;
 
-        API.get("/api/invoices/" + id)
+        API.get("/invoices/" + id)
             .then(response => {
                 this.setState({
                     loaded: true,
