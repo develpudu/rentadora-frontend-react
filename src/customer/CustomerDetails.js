@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import { Card, Image, Table, TableHeader, TableHeaderCell, TableRow, TableBody, TableCell, Header, List } from 'semantic-ui-react';
+import { Card, Image, Table, TableHeader, TableHeaderCell, TableRow, TableBody, TableCell, List } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 export class CustomerDetails extends Component {
