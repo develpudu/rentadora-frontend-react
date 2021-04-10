@@ -85,7 +85,7 @@ export class End extends Component {
                 {error && <Message warning content={errorMessage} />}
 
                 <Form onSubmit={this.handleSubmit}>
-                    <Form.Input required name="bookingid" value={bookingid} type="text" label="Codigo de reserva" onChange={this.handleChange} />
+                    <Form.Input required name="bookingid" value={bookingid} type="text" label="Codigo de reserva" maxLength="6" onChange={this.handleChange} />
 
                     <Form.Input required name="endmileage" type="text" label="Kilomentraje final (km)" onChange={this.handleChange} />
 

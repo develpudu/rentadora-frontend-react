@@ -131,18 +131,18 @@ export class CreateBooking extends Component {
                 <Form autoComplete="off" onSubmit={this.handleSubmit}>
                     <Form.Input placeholder="John" required name="firstname" label="Nombre" type="text" onChange={this.handleChange} />
                     <Form.Input placeholder="Doe" required name="lastname" label="Apellido" type="text" onChange={this.handleChange} />
-                    <Form.Input placeholder="00000000" required name="license" label="Nro de licencia" type="text" onChange={this.handleChange} />
+                    <Form.Input placeholder="00000000" required name="license" label="Nro de licencia" type="text" maxLength="8" onChange={this.handleChange} />
 
                     <Divider />
 
-                    <Form.Select required name="car" label="Auto" options={cars} placeholder="Seleccionar..." onChange={this.handleChange} />
+                    <Form.Select required name="car" label="Vehiculo" options={cars} placeholder="Seleccionar..." onChange={this.handleChange} />
                     <Form.Input placeholder="9999" required name="startmileage" label="Kilomentraje actual (km)" type="text" onChange={this.handleChange} />
 
                     <Divider />
 
-                    <Form.Input required name="date" type="date" label="Date" onChange={this.handleChange} />
+                    <Form.Input required name="date" type="date" label="Fecha" onChange={this.handleChange} />
                     <Form.Group widths="equal">
-                        <Form.Select label="Horas" required name="hour" options={hours} onChange={this.handleChange} />
+                        <Form.Select label="Hora" required name="hour" options={hours} onChange={this.handleChange} />
                         <Form.Select label="Minutos" required name="minute" options={minutes} onChange={this.handleChange} />
                     </Form.Group>
 
